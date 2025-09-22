@@ -11,11 +11,11 @@ const isOwnerPath = useLocation().pathname.includes("owner");
     <div>
 
    {!isOwnerPath &&   <Navbar/>}
-   <div className='min-h-[70vh]'>
+  <div className="min-h-[70vh]">
     <Routes>
-      <Route path='/' element={<Home/>}/>
+      <Route path='/' element={<Home/>} />
     </Routes>
-   </div>
+    </div>
       
     </div>
   )
