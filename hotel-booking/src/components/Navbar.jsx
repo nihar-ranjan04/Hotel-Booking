@@ -111,10 +111,10 @@ const Navbar = () => {
         {user ? (
           <UserButton>
             <UserButton.MenuItems>
-              <UserButton.Action
-                label="My Booking"
+              <UserButton.Action 
+                label="My Bookings"
                 labelIcon={<BookIcon />}
-                onClick={navigate("/")}
+                onClick={() => navigate("/my-bookings")}
               />
             </UserButton.MenuItems>
           </UserButton>
@@ -133,17 +133,17 @@ const Navbar = () => {
       {/* Mobile Menu Button */}
 
       <div className="flex items-center gap-3 md:hidden">
-        {user && (
+        {user && 
           <UserButton>
             <UserButton.MenuItems>
               <UserButton.Action
-                label="My Booking"
+                label="My Bookings"
                 labelIcon={<BookIcon />}
-                onClick={navigate("/")}
+                onClick={() => navigate("/my-bookings")}
               />
             </UserButton.MenuItems>
           </UserButton>
-        )}
+        }
         <img
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           src={assets.menuIcon}
