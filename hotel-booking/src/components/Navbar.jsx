@@ -67,7 +67,7 @@ const Navbar = () => {
         <img
           src={assets.logo}
           alt="logo"
-          className={`h-9 ${isScrolled && "invert opacity-80"}`}
+          className={`h-9 ${isScrolled && " opacity-80"}`}
         />
       </Link>
 
@@ -77,8 +77,8 @@ const Navbar = () => {
           <a
             key={i}
             href={link.path}
-            className={`group flex flex-col gap-0.5 ${
-              isScrolled ? "text-gray-700" : "text-white"
+            className={`group flex flex-col gap-0.5 uppercase ${
+              isScrolled ? "text-gray-700" : "text-white uppercase"
             }`}
           >
             {link.name}
@@ -90,8 +90,8 @@ const Navbar = () => {
           </a>
         ))}
         <button
-          className={`border px-4 py-1 text-sm font-light rounded-full cursor-pointer ${
-            isScrolled ? "text-black" : "text-white"
+          className={`border px-4 py-1 text-sm font-light rounded-full cursor-pointer uppercase ${
+            isScrolled ? "text-black" : "text-white uppercase"
           } transition-all`}
           onClick={() => navigate("/owner")}
         >
