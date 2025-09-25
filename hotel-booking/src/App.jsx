@@ -10,7 +10,7 @@ import Layout from './Pages/hotelOwner/Layout';
 import Dashboard from './Pages/hotelOwner/Dashboard';
 import AddRoom from './Pages/hotelOwner/AddRoom';
 import ListRoom from './Pages/hotelOwner/ListRoom';
-
+import HotelReg from './components/HotelReg';
 const App = () => {
 
   const isOwnerPath = useLocation().pathname.includes("owner");
@@ -19,6 +19,7 @@ const App = () => {
     <div>
 
       {!isOwnerPath && <Navbar />}
+     {false && <HotelReg />}
       <div className="min-h-[70vh]">
         <Routes>
           <Route path='/' element={<Home />} />

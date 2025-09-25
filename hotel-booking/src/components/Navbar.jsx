@@ -77,8 +77,8 @@ const Navbar = () => {
           <a
             key={i}
             href={link.path}
-            className={`group flex flex-col gap-0.5 uppercase ${
-              isScrolled ? "text-gray-700" : "text-white uppercase"
+            className={`group flex flex-col gap-0.5 ${
+              isScrolled ? "text-gray-700" : "text-white "
             }`}
           >
             {link.name}
@@ -90,7 +90,7 @@ const Navbar = () => {
           </a>
         ))}
         <button
-          className={`border px-4 py-1 text-sm font-light rounded-full cursor-pointer uppercase ${
+          className={`border  px-4 py-1 text-sm font-light rounded-full cursor-pointer uppercase ${
             isScrolled ? "text-black" : "text-white uppercase"
           } transition-all`}
           onClick={() => navigate("/owner")}
@@ -173,7 +173,7 @@ const Navbar = () => {
 
         {user && (
           <button
-            className="border px-4 py-1 text-sm font-light rounded-full cursor-pointer transition-all"
+            className="border px-4 py-1 text-sm font-light rounded-full cursor-pointer transition-all "
             onClick={() => navigate("/owner")}
           >
             DashBoard

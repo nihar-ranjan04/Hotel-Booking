@@ -10,11 +10,11 @@ const Dashboard = () => {
         align="left"
         font="outfit"
         title="Dashboard"
-        subTitle="Monitor Your room listing, tracking bookings and analyse revenue-all in one place.stay updated with real-time insights to ensure smooth operation"
+        subTitle="Monitor Your room listing, tracking bookings and analyze revenue-all in one place.stay updated with real-time insights to ensure smooth operation"
       />
       <div className="flex gap-4 my-8">
         {/* Total Bookings  */}
-        <div className="bg-primary/3 border border-primary/10 rounded flex p-4 pr-8">
+        <div className="bg-primary/3 border border-primary/10 rounded-xl flex p-4 pr-8">
           <img
             src={assets.totalBookingIcon}
             alt=""
@@ -30,7 +30,7 @@ const Dashboard = () => {
 
         {/* Total Revenue  */}
 
-        <div className="bg-primary/3 border border-primary/10 rounded flex p-4 pr-8">
+        <div className="bg-primary/3 border border-primary/10 rounded-xl flex p-4 pr-8">
           <img
             src={assets.totalRevenueIcon}
             alt=""

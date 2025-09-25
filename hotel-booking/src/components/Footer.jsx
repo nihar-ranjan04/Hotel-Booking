@@ -85,10 +85,10 @@ const Footer = () => {
           <div className="flex items-center mt-4">
             <input
               type="text"
-              className="bg-white rounded-l border border-gray-300 h-9 px-3 outline-none"
+              className="bg-white rounded-xl border border-gray-300 h-9 px-3 outline-none"
               placeholder="Your email"
             />
-            <button className="flex items-center justify-center bg-black h-9 w-9 aspect-square rounded-r">
+            <button className="flex items-center justify-center bg-black h-9 w-9 aspect-square rounded-xl">
               <img
                 src={assets.arrowIcon}
                 alt="arrow-icon"
