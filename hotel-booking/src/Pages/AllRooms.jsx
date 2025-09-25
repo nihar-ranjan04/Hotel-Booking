@@ -4,21 +4,30 @@ import { useNavigate } from "react-router-dom";
 import StarRating from "../components/StarRating";
 
 const CheckBox = ({ label, seleted = false, onchange = () => {} }) => {
-    return(
-        <label className="flex gap-3 items-center cursor-pointer mt-2 text-sm">
-          <input type="checkbox" checked={seleted} onChange={(e)=>onchange(e.target.checked,label)}/>
-          <span className="font-light seleted-none">{label}</span>
-        </label>
-    )
+  return (
+    <label className="flex gap-3 items-center cursor-pointer mt-2 text-sm">
+      <input
+        type="checkbox"
+        checked={seleted}
+        onChange={(e) => onchange(e.target.checked, label)}
+      />
+      <span className="font-light seleted-none">{label}</span>
+    </label>
+  );
 };
 
 const RadioButton = ({ label, seleted = false, onchange = () => {} }) => {
-    return(
-        <label className="flex gap-3 items-center cursor-pointer mt-2 text-sm">
-          <input type="radio" name="sortOption" checked={seleted} onChange={()=>onchange(label)}/>
-          <span className="font-light seleted-none">{label}</span>
-        </label>
-    )
+  return (
+    <label className="flex gap-3 items-center cursor-pointer mt-2 text-sm">
+      <input
+        type="radio"
+        name="sortOption"
+        checked={seleted}
+        onChange={() => onchange(label)}
+      />
+      <span className="font-light seleted-none">{label}</span>
+    </label>
+  );
 };
 const AllRooms = () => {
   const navigate = useNavigate();
@@ -105,18 +114,19 @@ const AllRooms = () => {
       </div>
       {/* Filters */}
       <div className="bg-white w-80 border border-gray-300 text-gray-600 max-lg:mb-8 min-lg:mt-16">
-        <div>
+        <div className="flex justify-between items-center px-5 pt-4">
           <p className="text-base font-medium text-gray-800">FILTERS</p>
-          <div className="text-xs cursor-pointer">
+          <div className="text-xs cursor-pointer flex gap-4">
             <span
               onClick={() => setOpenFilters(!openFilters)}
-              className="lg-hidden"
+              className="lg:hidden"
             >
               {openFilters ? "HIDE" : "SHOW"}
             </span>
             <span className="hidden lg:block">CLEAR</span>
           </div>
         </div>
+
         <div
           className={`${
             openFilters ? "h-auto" : "h-0 lg:h-auto"
@@ -124,21 +134,23 @@ const AllRooms = () => {
         >
           <div className="px-5 pt-5">
             <p className="font-medium text-gray-800 pb-2">Popular filters</p>
-            {roomtypes.map((room,index)=>{
-              <CheckBox key={index} label={room}/>
-            })}
+            {roomtypes.map((room, index) => (
+              <CheckBox key={index} label={room} />
+            ))}
           </div>
-           <div className="px-5 pt-5">
+
+          <div className="px-5 pt-5">
             <p className="font-medium text-gray-800 pb-2">Price Range</p>
-            {priceRanges.map((range,index)=>{
-              <CheckBox key={index} label={`$ ${range}`}/>
-            })}
+            {priceRanges.map((range, index) => (
+              <CheckBox key={index} label={`$ ${range}`} />
+            ))}
           </div>
-           <div className="px-5 pt-5 pb-7">
+
+          <div className="px-5 pt-5 pb-7">
             <p className="font-medium text-gray-800 pb-2">Sort By</p>
-            {sortOptions.map((option,index)=>{
-              <RadioButton key={index} label={option}/>
-            })}
+            {sortOptions.map((option, index) => (
+              <RadioButton key={index} label={option} />
+            ))}
           </div>
         </div>
       </div>
