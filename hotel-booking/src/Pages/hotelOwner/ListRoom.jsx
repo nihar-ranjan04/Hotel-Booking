@@ -24,7 +24,7 @@ const ListRoom = () => {
                 <td className='py-3 px-4 text-gray-700 border-t border-gray-300'>{item.roomType}</td>
                 <td className='py-3 px-4 text-gray-700 border-t border-gray-300 max-sm:hidden'>{item.amenities.join(", ")}</td>
 
-                <td className='py-3 px-4 text-gray-700 border-t border-gray-300'>{item.pricePerNight}
+                <td className='py-3 px-4 text-gray-700 border-t border-gray-300'>$ {item.pricePerNight}
 
                 </td>
                 <td className='py-3 px-4 text-gray-700 border-t border-gray-300 text-sm text-red-500 text-center'>

@@ -135,7 +135,7 @@ const RoomDetails = () => {
                 type="number "
                 id="guests"
                 placeholder="0"
-                className="max-w-20 rounded border border-gray-300 px-3 py-2 mt-1.5 outline-none"
+                className="max-w-20 rounded border border-gray-300 px-3 py-0.5 mt-1.5 outline-none"
                 required
               />
             </div>

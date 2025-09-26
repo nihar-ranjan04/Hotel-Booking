@@ -90,8 +90,8 @@ const Navbar = () => {
           </a>
         ))}
         <button
-          className={`border  px-4 py-1 text-sm font-light rounded-full cursor-pointer uppercase ${
-            isScrolled ? "text-black" : "text-white uppercase"
+          className={`border  px-4 py-1 text-sm font-light rounded-full cursor-pointer uppercase hover:bg-gray-200 ${
+            isScrolled ? "text-black" : "text-white uppercase hover:text-black"
           } transition-all`}
           onClick={() => navigate("/owner")}
         >
