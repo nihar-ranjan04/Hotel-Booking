@@ -67,7 +67,7 @@ const AllRooms = () => {
               src={room.images[0]}
               alt="hotel-img"
               title="View Room Details "
-              className="max-h-65 md:w-1/2 rounded-xl shadow-lg object-cover cursor-pointer"
+              className="max-h-65 md:w-1/2 rounded-xl shadow-md shadow-black/40 object-cover cursor-pointer"
             />
             <div className="md:w-1/2 flex flex-col gap-2">
               <p className="text-gray-600">{room.hotel.city}</p>
@@ -113,7 +113,7 @@ const AllRooms = () => {
         ))}
       </div>
       {/* Filters */}
-      <div className="bg-white w-80 border border-gray-300 text-gray-600 max-lg:mb-8 min-lg:mt-16">
+      <div className="bg-white w-80 border rounded-xl border-gray-300 text-gray-600 max-lg:mb-8 min-lg:mt-16">
         <div className="flex justify-between items-center px-5 pt-4">
           <p className="text-base font-medium text-gray-800">FILTERS</p>
           <div className="text-xs cursor-pointer flex gap-4">
